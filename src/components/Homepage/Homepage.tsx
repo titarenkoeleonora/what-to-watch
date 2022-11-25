@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import ArrowUpIcon from '../../images/arrowUp.svg';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { getPopularMovies, searchMovies } from '../../store/moviesSlice';
+import { getUpcomingMovies, searchMovies } from '../../store/moviesSlice';
 import ButtonIcon from '../UI/Buttons/ButtonIcon/ButtonIcon';
 import { HomepageWrapper } from './Homepage.styles';
 import Movies from './Movies/Movies';
@@ -25,7 +25,7 @@ const Homepage = () => {
     if (search) {
       dispatch(searchMovies({ search, page }));
     } else {
-      dispatch(getPopularMovies({ page }));
+      dispatch(getUpcomingMovies({ page }));
     }
   }, [page, search, genres, dispatch]);
 

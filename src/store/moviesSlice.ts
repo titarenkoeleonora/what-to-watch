@@ -33,14 +33,14 @@ const initialState: MoviesState = {
   isHaveNextPage: true,
 };
 
-export const getPopularMovies = createAsyncThunk(
+export const getUpcomingMovies = createAsyncThunk(
   'movies/getMovies',
   async (data: { page: number }, thunkApi) => {
     const { page } = data;
 
     try {
       const response = await apiCLient.get(
-        `/movie/popular?api_key=${process.env.REACT_APP_MOVIES_API_KEY}&language=en-US&page=${page}`,
+        `/movie/upcoming?api_key=${process.env.REACT_APP_MOVIES_API_KEY}&language=en-US&page=${page}`,
       );
 
       return response.data;
@@ -115,7 +115,7 @@ const moviesSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(getPopularMovies.fulfilled, (state: MoviesState, action) => {
+    builder.addCase(getUpcomingMovies.fulfilled, (state: MoviesState, action) => {
       const { results, page, total_pages } = action.payload;
 
       const adaptedMovies = results.map((movie: InitialMovie) =>
@@ -127,7 +127,7 @@ const moviesSlice = createSlice({
       state.isHaveNextPage = page < total_pages;
     });
 
-    builder.addCase(getPopularMovies.pending, (state: MoviesState) => {
+    builder.addCase(getUpcomingMovies.pending, (state: MoviesState) => {
       state.isMoviesLoading = true;
     });
 
