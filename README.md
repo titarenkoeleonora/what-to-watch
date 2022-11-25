@@ -3,11 +3,32 @@
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> An app for cinephiles and movie hobbyists
+> An app for cinephiles and movie hobbyists.
 
-### 🏠 [Homepage](..)
+### 🏠 [Homepage](https://github.com/titarenkoeleonora/what-to-watch)
 
-### ✨ [Demo](..)
+### ✨ [Demo](https://what-to-watch-q9zt1eh0q-titarenkoeleonora.vercel.app/)
+
+## What's done
+
+- [x] The app should allow users to scroll through the list of upcoming movies - including movie name, poster or
+backdrop image, genre and release date.
+- [x] The app should allow users to select a specific movie to see details (name, poster image, genre, overview and
+release date)
+- [x] The app should allow users to search for movies by entering a partial or full movie name.
+
+As a bonus :
+
+- [x] App deployed to Vercel
+- [x] ESlint and prettier for automatic code formatting and matching it to best practices and code style
+- [x] Responsive layout
+
+Used libraries: 
+ - [x] Redux toolkit to keep global state
+ - [x] Style-components to separate business logic from rendering logic
+ - [x] Axios for HTTP requests
+ - [x] Moment.js for format dates
+ - [x] React-router-dom to implement dynamic routing in an app
 
 ## Install
 
@@ -33,10 +54,3 @@ npm run test
 
 * Github: [@titarenkoeleonora](https://github.com/titarenkoeleonora)
 * LinkedIn: [@eleonora-titarenko](https://linkedin.com/in/eleonora-titarenko)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
