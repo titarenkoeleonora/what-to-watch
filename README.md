@@ -7,7 +7,7 @@
 
 ### 🏠 [Homepage](https://github.com/titarenkoeleonora/what-to-watch)
 
-### ✨ [Demo](https://what-to-watch-six-xi.vercel.app/)
+### ✨ [Demo](https://what-to-watch-q9zt1eh0q-titarenkoeleonora.vercel.app/)
 
 ## What's done
 
